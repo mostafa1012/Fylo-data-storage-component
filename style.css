@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);;
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-size: 14px;
+  background-color: var(--Very-Dark-Blue);
+  width: 100%;
+  height: 100vh;
+  background-image: url(../Fylo-data-storage-component/images/bg-desktop.png);
+  background-position: 0 50vh;
+  background-repeat: no-repeat;
+}
+.fylo {
+  width: 250px;
+  background-color: var(--Dark-Blue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: var(--Dark-Blue) solid;
+  border-radius: 5px 40px 5px 5px;
+}
+.icon div {
+  background-color: var(--Very-Dark-Blue);
+  width: 30px;
+  height: 30px;
+  border: var(--Very-Dark-Blue) solid;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.storage {
+  width: 350px;
+  height: 100px;
+  background-color: var(--Dark-Blue);
+  border: var(--Dark-Blue) solid;
+  border-radius: 8px;
+  margin-left: 25px;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+}
+.storage>p {
+  color: var(--Pale-Blue);
+  font-size: 10px;
+} 
+.storage>p span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.storage .par {
+  width: 100%;
+  background-color: hsl(229, 57%, 19%);
+  border: hsl(229, 57%, 19%) solid;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%) , hsl(335, 100%, 65%) 75% , hsl(229, 57%, 19%) 75% , hsl(229, 57%, 19%) 100% );
+}
+.storage .par .rec {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--Pale-Blue);
+  margin-left: 72%;
+}
+.mass {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 15px;
+  background-color: white;
+  width: 150px;
+  text-align: center;
+  position: absolute;
+  top: -50%;
+  right: 10%;
+  border: white solid;
+  border-radius: 5px 5px 0px 5px;
+}
+.mass::before {
+  content: "";
+  position: absolute;
+  border: 20px solid;
+  border-color: transparent white transparent transparent;
+  bottom: -20px;
+  right: -3px
+}
+.container {
+  width: 80%;
+}
+@media (max-width: 1440px) {
+
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(../Fylo-data-storage-component/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0vw 0vh ;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  .storage {
+    margin-top: 50px;
+    width: 260px;
+  }
+  .mass {
+    position: static;
+    margin: auto;
+  }
+  .mass::before {
+    display: none;
+  }
+}
